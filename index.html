@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Camel Login</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="img-container">
+      <div id="img-title">Camel</div>
+      <div id="img-caption">
+        Photo by
+        <a
+          href="https://unsplash.com/@wolfgang_hasselmann?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+          >Wolfgang Hasselmann</a
+        >
+        on
+        <a
+          href="https://unsplash.com/images/nature/desert?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+          >Unsplash</a
+        >
+      </div>
+    </div>
+    <div id="form-container">
+      <div id="form-text">
+        <p>
+          Find halal food locations near you now! Satisfy your cravings with
+          Camel
+        </p>
+        <p>You <i>know</i> you want to</p>
+      </div>
+      <form id="form">
+        <h1>Let's Get Started!</h1>
+        <div class="form-line">
+          <div class="form-element">
+            <label for="first_name">FIRST NAME</label>
+            <input
+              class="non-checkbox"
+              type="text"
+              id="first_name"
+              name="first_name"
+              required
+            />
+          </div>
+          <div class="form-element">
+            <label for="last_name">LAST NAME</label
+            ><input
+              class="non-checkbox"
+              type="text"
+              name="last_name"
+              id="last_name"
+              required
+            />
+          </div>
+        </div>
+        <div class="form-line">
+          <div class="form-element">
+            <label for="email">EMAIL</label>
+            <input
+              class="non-checkbox"
+              type="email"
+              id="email"
+              name="email"
+              required
+            />
+          </div>
+          <div class="form-element">
+            <label for="phone">PHONE NUMBER</label
+            ><input
+              class="non-checkbox"
+              type="tel"
+              inputmode="numeric"
+              name="phone"
+              id="phone"
+              pattern="(\+\d{1,2}[\s])?\(?\d{3}\)?[\s.\-]?\d{3}[\s.\-]?\d{4}"
+              required
+            />
+          </div>
+        </div>
+        <div class="form-line">
+          <div class="form-element">
+            <label for="pwd">PASSWORD</label>
+            <input
+              class="non-checkbox"
+              type="password"
+              id="pwd"
+              name="pwd"
+              pattern="(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}"
+              title="Minimum eight characters, at least one letter and one number"
+              required
+            />
+            <div id="check">
+              <input
+                id="show-pass"
+                type="checkbox"
+                onclick="showPass()"
+              />
+              <label for="show-pass"></label>Show Password</label>
+            </div>
+          </div>
+          <div class="form-element">
+            <label for="pwd_conf">CONFIRM PASSWORD</label
+            ><input
+              class="non-checkbox"
+              type="password"
+              name="pwd_conf"
+              id="pwd_conf"
+              required
+            />
+            <p id="error-pwd">*Passwords do not match</p>
+          </div>
+        </div>
+      </form>
+      <div id="footer">
+        <button id="button" type="submit" onclick="setError()"form="form">Create Account</button>
+        <p>Already have an account? <a href="#" id="log-in">Log in</a></p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
